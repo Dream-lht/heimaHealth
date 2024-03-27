@@ -54,7 +54,7 @@ struct WelcomePage {
     handleJump() {
         setTimeout(() => {
             router.replaceUrl({
-                url:'pages/Index'
+                url:'pages/home/Index'
             })
         },1000)
 
