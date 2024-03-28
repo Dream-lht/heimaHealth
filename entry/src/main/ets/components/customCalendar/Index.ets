@@ -21,10 +21,10 @@ class Day {
     .fontSize(18)
 }
 
-@Preview
 @Component
 struct CustomCalendar {
-    // @Link show:boolean
+    @Link show:boolean
+    @Link value:string;
     // 当前时间
     private time:Date = new Date();
     private weeks = ['一','二','三','四','五','六','日']
@@ -40,7 +40,6 @@ struct CustomCalendar {
         let day = new Date(`${year}-${month + 1}-1`).getDay();
         // 获取当前月份总天数
         let totalDays = this.getMonthDays(month);
-        console.log(day.toString(),totalDays.toString());
 
         // 构造日期数据
         for(let i = 1; i < totalDays + day; i++) {
@@ -51,10 +50,6 @@ struct CustomCalendar {
                 this.days.push(null);
             }
         }
-
-        console.log(JSON.stringify(this.days));
-
-
     }
 
     /*

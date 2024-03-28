@@ -49,7 +49,7 @@ struct Home {
         TabContent(){
           Text('我的');
         }.tabBar(this.customTabBarBtn('我的',2,$r('app.media.my_active'),$r('app.media.my')))
-      }.onChange(this.handleTabBarChange.bind(this))
+      }.onChange(this.handleTabBarChange.bind(this)).scrollable(false)
     }
     .height('100%')
   }

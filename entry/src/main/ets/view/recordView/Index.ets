@@ -8,9 +8,14 @@ struct RecordView {
         Column() {
             // 顶部header组件
             Header({isBack:false,title:'黑马健康'})
-            // 顶部滑动框
-            ShowCard()
-            // 早 / 中 / 晚 食物列表
+            Column() {
+                // 顶部滑动框
+                ShowCard()
+                // 早 / 中 / 晚 食物列表
+            }
+            .width('90%')
+            .layoutWeight(1)
+
         }
         .width('100%')
         .height('100%')
